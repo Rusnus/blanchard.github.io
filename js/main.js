@@ -155,7 +155,7 @@ window.addEventListener('DOMContentLoaded', function () {
     document.querySelector('.nav__menu').classList.toggle('burger-menu--active')
   })
 
-  document.querySelector(".nav-search__button").addEventListener('click', function () {
+  document.querySelector(".nav__search-btn").addEventListener('click', function () {
     document.querySelector('.search').classList.toggle('search--active')
   })
   document.querySelector(".search__close").addEventListener('click', function () {
