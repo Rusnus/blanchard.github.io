@@ -17,21 +17,18 @@
   margin-right: 20px;
 }
 
-.footer-list__link:hover .path {
-  fill: white;
+.footer-list__link {
+  color: #CACACA;
+  outline: none;
 }
 
+.footer-list__link:hover,
 .footer-list__link:focus {
-  outline: none;
+  color: white;
 }
 
-.footer-list__link:focus .path {
-  outline: none;
-  fill: white;
-}
-
-.footer-list__link:active .path {
-  fill: #9D5CD0;
+.footer-list__link:active {
+  color: #9D5CD0;
 }
 
 @media (max-width:1024px) {

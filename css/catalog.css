@@ -28,58 +28,43 @@
   cursor: pointer;
 }
 
-.catalog-item:first-child .ui-state-active {
-  border-top: 1px solid rgba(121, 67, 164, 1);
+/* hover */
+
+.catalog-item:first-child .ui-state-hover {
+  border-top: 1px solid #9D5CD0;
+  color: #9D5CD0;
+}
+
+.ui-state-hover {
+  border-top: 1px solid #9D5CD0;
+  border-bottom: 1px solid #9D5CD0;
+  color: #9D5CD0;
+}
+
+.ui-state-hover .ui-icon-triangle-1-e {
+  background: #D1A9F0;
 }
 
 .ui-accordion-content {
   border-bottom: 1px solid rgba(202, 202, 202, 1);
 }
 
-/* фокус */
-
-/* .ui-state-focus {
-  outline: none;
-}
+/* focus */
 
 .ui-state-focus .catalog-item__title {
   color: white;
   background: #9D5CD0;
-}
-
-.ui-state-focus .ui-icon-triangle-1-e {
-  background: rgba(209, 169, 240, 1);
-} */
-
-/*  */
-
-/* .ui-state-focus .ui-state-active {
-  border-top: 1px solid rgba(121, 67, 164, 1);
-  border-bottom: 1px solid rgba(121, 67, 164, 1);
-  color: rgba(121, 67, 164, 1);
-} */
-
-.ui-state-hover:hover,
-.catalog-item:first-child .ui-state-hover:hover {
-  border-top: 1px solid #9D5CD0;
-  border-bottom: 1px solid #9D5CD0;
-  color: #9D5CD0;
-}
-
-.ui-state-hover:hover .ui-icon-triangle-1-e {
-  background: #D1A9F0;
 }
 
 .ui-state-focus {
   outline: none;
 }
 
-.ui-state-focus .catalog-item__title {
-  color: white;
-  background: #9D5CD0;
+.ui-state-focus .ui-icon-triangle-1-e {
+  background: #D1A9F0;
 }
 
-.ui-state-focus .ui-icon-triangle-1-e {
+.ui-state-hover.ui-state-focus .ui-icon-triangle-1-e {
   background: #D1A9F0;
 }
 
@@ -88,21 +73,29 @@
   background: transparent;
 }
 
-.ui-state-active,
-.catalog-item:first-child .ui-state-active:hover {
-  border-top: 1px solid #7943A4;
-  border-bottom: 1px solid #7943A4;
-}
-
-.ui-state-active .ui-icon-triangle-1-e {
-  border-color: #9D5CD0;
-}
+/* active */
 
 .ui-state-hover.ui-state-focus.ui-state-active .catalog-item__title {
   color: #7943A4;
   background: none;
 }
 
+.ui-state-active .catalog-item__title {
+  color: #7943A4;
+  background: none;
+}
+
+.ui-state-active .ui-icon-triangle-1-e {
+  border-color: #9D5CD0;
+}
+
+.ui-state-active,
+.catalog-item:first-child .ui-state-active {
+  border-top: 1px solid #7943A4;
+  border-bottom: 1px solid #7943A4;
+}
+
+/*  */
 
 .ui-accordion-content-active {
   visibility: visible;
@@ -422,7 +415,7 @@
     max-height: 300px;
   }
 
-   /* [aria-labelledby="ui-id-5"] {
+  /* [aria-labelledby="ui-id-5"] {
      max-height: 300px;
    } */
 }

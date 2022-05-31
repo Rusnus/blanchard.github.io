@@ -112,11 +112,24 @@
   margin-top: 6px;
 }
 
-.contacts-list__item:nth-child(1) {
-  margin-right: 20px;
+.contacts-list__link {
+  display: block;
+  width: 40px;
+  height: 40px;
+  outline: 1px solid transparent;
+  outline-offset: -1px;
 }
 
-.contacts-list__link:hover svg {
+.contacts-list__item:nth-child(1) {
+  margin-right: 20px;
+  color: #30BF39;
+}
+
+.contacts-list__item:nth-child(2) {
+  color: rgba(42, 171, 238, 1);
+}
+
+.contacts-list__link:hover {
   opacity: 0.5;
 }
 
@@ -125,14 +138,9 @@
   outline: none;
 }
 
-.contacts-list__link:active svg {
-  box-shadow: 0px 0px 0px 1px rgba(150, 67, 164, 1) inset;
+.contacts-list__link:active {
+  outline: 1px solid #9643A4;
   border-radius: 100px;
-  opacity: 1;
-}
-
-.contacts-list__item:nth-child(2)>.contacts-list__link:active svg {
-  border: 1px solid #9643A4;
 }
 
 /* карта */
@@ -329,13 +337,24 @@
     margin-top: 7px;
   }
 
-  .contacts-list__link svg {
+  .contacts-list__item {
+    display: block;
+    height: 53px;
+    width: 50px;
+  }
+
+  .contacts-list__link {
     width: 50px;
     height: 50px;
   }
 
   .contacts-list__item:nth-child(1) {
     margin-right: 20px;
+  }
+
+  .contacts-list__svg {
+    width: 50px;
+    height: 50px;
   }
 
   #map {
