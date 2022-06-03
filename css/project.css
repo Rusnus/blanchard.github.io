@@ -24,11 +24,13 @@
   color: white;
   background: #9D5CD0;
   outline: none;
+  transition: all 0.2s ease;
 }
 
 .project__link:active {
   color: #7943A4;
   border-bottom: 1px solid #7943A4;
+  transition: all 0.2s ease;
 }
 
 .project__partners {
@@ -54,17 +56,20 @@
   min-height: 152px;
   outline: 1px solid #cacaca;
   outline-offset: -2px;
+  transition: all 0.2s ease;
 }
 
-.project-swiper-slide picture img {
+.project-swiper-slide__img {
   max-width: 100%;
   filter: grayscale(1);
   opacity: 0.3;
+  transition: all 0.2s ease;
 }
 
-.project-swiper-slide:hover picture img {
+.project-swiper-slide:hover .project-swiper-slide__img {
   filter: grayscale(0);
   opacity: 1;
+  transition: all 0.2s ease;
 }
 
 .project-swiper-slide:focus-visible {
@@ -82,6 +87,7 @@
   border-radius: 50px;
   top: 56%;
   right: 0px;
+  transition: all 0.2s ease;
 }
 
 .project-swiper-button-next::after {
@@ -105,7 +111,7 @@
   border-radius: 50px;
   top: 55.7%;
   left: 0px;
-
+  transition: all 0.2s ease;
 }
 
 .project-swiper-button-prev::after {
@@ -139,30 +145,30 @@
 
 /* tooltip */
 
-.project__tooltip svg {
+.project__tooltip {
+  width: 16px;
+  height: 16px;
+  padding: 0;
   vertical-align: middle;
   border-radius: 100px;
-  background: transparent;
-}
-
-.project__tooltip {
-  padding: 0;
   border: none;
+  color: transparent;
   background: transparent;
   cursor: pointer;
+  transition: all 0.2s ease;
 }
 
-.project__tooltip:hover svg,
-.project__tooltip:focus svg {
+.project__tooltip:hover,
+.project__tooltip:focus{
   background: #D1A9F0;
 }
 
-.project__tooltip:active svg {
+.project__tooltip:active {
   background: #9D5CD0;
 }
 
-.project__tooltip:active svg path:nth-child(2) {
-  fill: white;
+.project__svg {
+  vertical-align: super;
 }
 
 .tippy-box[data-theme~='tooltip'] {
@@ -194,7 +200,7 @@
     text-align: center;
   }
 
-  .swiper-slide.project-swiper-slide img {
+  .project-swiper-slide__img {
     max-width: 88%;
   }
 
@@ -227,7 +233,7 @@
     text-align: center;
   }
 
-  .project-swiper-slide picture img {
+  .project-swiper-slide__img {
     max-width: 86%;
   }
 
@@ -279,7 +285,7 @@
     min-height: 110px;
   }
 
-  .swiper-slide.project-swiper-slide img {
+  .project-swiper-slide__img {
     max-width: 83%;
   }
 }
@@ -318,7 +324,7 @@
     min-height: 66px;
   }
 
-  .swiper-slide.project-swiper-slide img {
+  .project-swiper-slide__img {
     max-width: 57%;
   }
 

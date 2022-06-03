@@ -76,10 +76,12 @@ html {
 }
 
 .click:hover {
+  transition: color 0.2s ease;
   color: var(--hover-color);
 }
 
 .click:active {
+  transition: color 0.2s ease;
   color: var(--active-color);
 }
 
@@ -87,6 +89,7 @@ html {
   padding: 4px 6px;
   background-color: #7943A4;
   outline: none;
+  transition: background-color 0.2s ease;
 }
 
 .nav__button {
@@ -103,16 +106,19 @@ html {
 
 .nav__button:hover {
   color: var(--hover-color);
+  transition: color 0.2s ease;
 }
 
 .nav__button:active {
   color: var(--active-color);
+  transition: color 0.2s ease;
 }
 
 .nav__button:focus-visible {
   padding: 4px 5px;
   background-color: #7943A4;
   outline: none;
+  transition: background-color 0.2s ease;
 }
 
 .nav__icon {
@@ -148,6 +154,7 @@ html {
 }
 
 .hero__button {
+  position: relative;
   margin-bottom: 21%;
   padding: 19.5px 33px;
   border: 3px solid transparent;
@@ -163,17 +170,33 @@ html {
 
 .hero__button:hover {
   outline: 3px solid #D1A9F0;
+  transition: outline 0.2s ease;
 }
 
-.hero__button:focus {
-  outline: 3px solid #D1A9F0;
-  border: 3px solid white;
+.hero__button::before {
+  display: none;
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: -3%;
+  transform: translate(0, -50%);
+  width: 106%;
+  height: 128%;
+  border: 2px solid #9D5CD0;
+  border-radius: 100px;
+  background: transparent;
+  transition: all 0.2 ease;
+}
+
+.hero__button:focus-visible.hero__button::before {
+  display: block;
 }
 
 .hero__button:active {
   background: #7943A4;
   outline: 3px solid #D1A9F0;
   border: 3px solid transparent;
+  transition: all 0.2s ease;
 }
 
 .hero-swiper {
@@ -261,13 +284,15 @@ html {
   font-weight: normal;
   font-size: 18px;
   line-height: 25px;
+  transition: all 0.2s ease;
+
 }
 
 .item__button:hover {
   color: #9D5CD0;
 }
 
-.item__button:focus {
+.item__button:active {
   color: #7943A4;
 }
 
@@ -290,13 +315,15 @@ html {
   top: 55%;
   margin-top: -5px;
   transform: rotate(135deg);
+  transition: all 0.2s ease;
 }
 
 .item__button:hover::after {
   border-color: #9D5CD0;
+  transition: border-color 0.2s ease;
 }
 
-.item__button:focus::after {
+.item__button:active::after {
   border-width: 0px;
   border-left: 1px solid #7943A4;
   border-bottom: 1px solid #7943A4;
@@ -354,11 +381,13 @@ html {
 .dropdown__link:focus {
   border: 2px solid #9D5CD0;
   outline: none;
+  transition: border 0.2s ease;
 }
 
 .dropdown__link:active {
   background: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)),
     url(.png);
+  transition: background 0.2s ease;
 }
 
 .simplebar-track.simplebar-vertical {
@@ -376,10 +405,6 @@ html {
   opacity: 1;
   background-color: #FFFFFF;
   border-radius: 0;
-}
-
-.dropdown__link:focus-visible {
-  border-image: 2px solid #9D5CD0;
 }
 
 .simplebar-content-wrapper {
@@ -510,6 +535,8 @@ html {
   border-bottom: 1px solid white;
   background: transparent;
   color: white;
+  transition: border-color 0.2s ease;
+
 }
 
 .nav-custom__input::placeholder {
@@ -1064,9 +1091,11 @@ input:focus:-ms-input-placeholder {
     width: 19px;
     height: 2px;
   }
+
   .search__svg {
     padding-bottom: 8px;
   }
+
   .search__button-active,
   .search__svg {
     width: 17px;

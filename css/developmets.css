@@ -65,6 +65,7 @@
   cursor: pointer;
   bottom: 33.5px;
   left: 41.5px;
+  transition: all 0.2s ease;
 }
 
 .developmets-block__button::after {
@@ -117,6 +118,7 @@
   border-radius: 50px;
   top: 49.7%;
   right: -25px;
+  transition: all 0.2s ease;
 }
 
 .developmets-swiper-button-next::after {
@@ -140,7 +142,7 @@
   border-radius: 50px;
   top: 49.7%;
   left: -25px;
-
+  transition: all 0.2s ease;
 }
 
 .developmets-swiper-button-prev::after {
@@ -159,6 +161,23 @@
 
 .swiper-pagination-dev {
   display: none;
+}
+
+.developmets-swiper-button-prev:hover,
+.developmets-swiper-button-next:hover {
+  background-color: #D1A9F0;
+}
+
+.developmets-swiper-button-prev:focus-visible,
+.developmets-swiper-button-next:focus-visible {
+  border: 2px solid #9D5CD0;
+  outline: none;
+}
+
+.developmets-swiper-button-prev:active,
+.developmets-swiper-button-next:active {
+  background-color: #D1A9F0;
+  border: 2px solid #9D5CD0;
 }
 
 @media (max-width:1300px) {

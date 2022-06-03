@@ -20,6 +20,7 @@
 .footer-list__link {
   color: #CACACA;
   outline: none;
+  transition: color 0.2s ease;
 }
 
 .footer-list__link:hover,

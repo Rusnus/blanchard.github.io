@@ -40,12 +40,12 @@
 
 .choices {
   max-width: 400px;
+  transition: background 0.2s ease;
 }
 
 .choices:hover {
   border-radius: 6px;
   background: rgba(255, 255, 255, 0.3);
-
 }
 
 .choices.is-focused:focus {
@@ -126,9 +126,11 @@
   background: black;
 }
 
-.choices__list--dropdown .choices__item--selectable:hover {
+.choices__list--dropdown .choices__item--selectable:hover,
+.choices__list--dropdown .choices__item--selectable.is-highlighted {
   background: rgba(255, 255, 255, 0.3);
   opacity: 1;
+  transition: background 0.2s ease;
 }
 
 /* checkbox */
@@ -151,6 +153,8 @@
   line-height: 28px;
   max-width: fit-content;
   cursor: pointer;
+  transition: color 0.2s ease;
+
 }
 
 .checkbox__text {
@@ -173,6 +177,8 @@
   width: 12px;
   height: 12px;
   border: 1px solid #FFFFFF;
+  transition: border 0.2s ease;
+
 }
 
 .check+.checkbox__custom::after {
@@ -191,6 +197,8 @@
 
 .check:checked+.checkbox__custom::after {
   opacity: 1;
+  transition: opacity 0.2s ease;
+
 }
 
 .check:checked+.checkbox__custom {
